@@ -50,12 +50,13 @@ exports.AddToCart = async(req,res)=>{
             const response =await nCart.save();
             return res.status(201).json({response});
         }
-    } catch (error) {
-        console.log("error in add Items",error);
-        res.status(400).json({
-            status:"Fail",
-            error:error
-        });
+    }
+    catch (error) {
+        // console.log("error in add Items",error);
+        // res.status(400).json({
+        //     status:"Fail",
+        //     error:error
+        // });
     }
 
 }

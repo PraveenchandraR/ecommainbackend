@@ -5,8 +5,8 @@ dotenv.config({path:"./config.env"})
 const PORT = process.env.PORT || 8000;
 
 // const DB = process.env.DATABASE.replace("<PASSWORD>",process.env.DATABASE_PASSWORD);
-const DB = process.env.DATABASE.replace("<PASSWORD>", process.env.DATABASE_PASSWORD);
-// const DB = 'mongodb://127.0.0.1:27017/E-commers';
+// const DB = process.env.DATABASE.replace("<PASSWORD>", process.env.DATABASE_PASSWORD);
+const DB = 'mongodb+srv://PraveenEcomerce:wlapiLh0BtU2EoLW@cluster1.jaohfnq.mongodb.net/E-commers?retryWrites=true&w=majority/';
 
 mongoose.connect(DB,{
     useNewUrlParser:true

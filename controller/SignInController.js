@@ -50,7 +50,7 @@ exports.SignIn = async (req, res) => {
 
 exports.verify = (req,res)=>{
     const token = req.headers['authorization'].replace(/"|'/g, '');
-    console.log(token);
+    console.log(token); 
     // const userID = decodedToken.userID;
     // console.log(userID);
     if(token){
