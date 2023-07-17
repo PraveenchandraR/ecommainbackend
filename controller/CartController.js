@@ -72,8 +72,10 @@ exports.showCart= async(req,res) =>{
         let cart = await CartModel.findOne({userId:user._id});
         console.log("show cart's cart =>",cart);
         cart.products.map((product)=>{
-            if(product!==null)
+            if (product !== null) {
                 cartItems.push(product);
+            }
+           
         });
         
         res.status(200).json({
