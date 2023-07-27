@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 8000;
 
 // const DB = process.env.DATABASE.replace("<PASSWORD>",process.env.DATABASE_PASSWORD);
 // const DB = process.env.DATABASE.replace("<PASSWORD>", process.env.DATABASE_PASSWORD);
-const DB = 'mongodb+srv://PraveenEcomerce:wlapiLh0BtU2EoLW@cluster1.jaohfnq.mongodb.net/E-commers?retryWrites=true&w=majority/';
+const DB = 'mongodb+srv://PraveenEcomerce:omRcxBrJ7vNcN5Mn@cluster1.jaohfnq.mongodb.net/E-commers?retryWrites=true&w=majority/';
 
 mongoose.connect(DB,{
     useNewUrlParser:true
