@@ -22,12 +22,18 @@ exports.AddToCart = async(req,res)=>{
                     return false
 
             });
-            console.log("itemIndex==>",itemIndex);
-            if(itemIndex > -1){
+            console.log("itemIndex==>", itemIndex);
+            
+      if(itemIndex > -1){
                 let productQuantity = cart.products[itemIndex];   // will return object product[{},{},{}]
                 productQuantity.quantity = quantity;
                 cart.products[itemIndex] = productQuantity;       // assigned updated Product obj
-            }else{
+      }
+            // if (itemIndex < 0) {
+            //     cart.products.deleteOne({ _id: productID })
+            //     console.log("this is item index",itemIndex)
+            // }
+            else {
                 cart.products.push(product);
             }
             cart = await cart.save();
@@ -52,11 +58,11 @@ exports.AddToCart = async(req,res)=>{
         }
     }
     catch (error) {
-        // console.log("error in add Items",error);
-        // res.status(400).json({
-        //     status:"Fail",
-        //     error:error
-        // });
+        console.log("error in add Items",error);
+        res.status(400).json({
+            status:"Fail",
+            error: error 
+        });
     }
 
 }
